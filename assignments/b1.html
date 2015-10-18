@@ -7,39 +7,81 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+  <link rel="stylesheet" href="../style/style.css">
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Computer Graphics Group 26 - Fall 2015</a>
+  <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="home.html">Assignments</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+  <div class = "contianer table">
+    <h1><center>Assignment B1</center></h1>
+    <h2><center>Navigation and Animation</center></h2>
+    <hr>
+  </div>
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-6 desc">
+        <h3>Description</h3>
+        <p class = "pdesc">
+          <b class = "ptitle">Part 1: Agent Navigation</b>
+          <br>
+          Our implementation allows users to click a destination before clicking on agents. You may click multiple agents to go towards a destination
+        </p>
+        <p class = "pdesc">
+          <b class = "ptitle">Part 2: Mecanim Animation</b>
+          <br>
+          Here users get to test the animation of a simple rig provided by the Raw Mocap package. Users may use (w) to move forward and (s) to move backward as well as (space) to jump. 
+          <br>
+        </p>  
+        <p class = "pdesc">
+          <b class = "ptitle">Part 3: Animation and Navigation</b>
+          <br>
+          We removed the capsule agents for the rig used in Part 2. The functionality is the same as Part 1. Users click on a destination then agent. You may also click multiple agents at a time. 
+        </p>
+        <p class = "pdesc">
+          <b class = "ptitle">Bonus Features</b>
+          <br>
+          We added one Nazgul agent that repels agents that go toward it. You may move the Nazgul agent the same way as other agents. 
+        </p>
+      </div>
+      <div class = "col-md-3 links">
+        <h3>Video</h3>
+        <a href = "#">Part 1</a>
+        <br>
+        <a href = "#">Part 2</a>
+        <br>
+        <a href = "#">Part 3</a>
+      </div>
+      <div class = "col-md-3 links">
+        <h3>Demo</h3>
+        <a href = "#">Playable Demo</a>
       </div>
     </div>
-  </nav>
-  <h1>Assignment B1</h1>
-  <h2>Navigation and Animation</h2>
-  <hr>
 
-  <h3>Video Demos</h3>
-  <ul>
-    <li>Link1</li>
-    <li>Link2</li>
-    <li>Link3</li>
-  </ul>
+    <hr>
 
-  <h3>Description</h3>
-  <p>
-  Describe Project
-  </p>
+    <footer>
+      <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
+        <br> 
+        Computer Graphics Group 26
+        <br>
+        Fall 2015</p>
+    </footer>
+  </div>
 
-  <h3>Demo</h3>
-  <ul>
-    <li>Link1</li>
-    <li>Link2</li>
-    <li>Link3</li>
-  </ul>
 </body>
 </html>
 
