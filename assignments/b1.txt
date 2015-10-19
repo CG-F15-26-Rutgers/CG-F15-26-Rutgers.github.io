@@ -1,0 +1,53 @@
+CS428
+Assignment B1 Documentation
+Group 26
+Jon Lee(jl1424), Anthony Castronuovo(ajc320), Jake Taubner(jdt97)
+
+Link to Github:
+https://github.com/CG-F15-26-Rutgers/UnityProjects/tree/master/BAssignments/B1
+
+Link to demo:
+http://cg-f15-26-rutgers.github.io/assignments/b1/demo/demo.html
+There is only one offline build because all three scenes have been integrated through the menu. You may access each one individually from the one build.
+
+
+
+
+Questions from Assignment Specification:
+1. Explain the difference (in behavior) between carving and not carving option for a NavMeshObstacle? When and why should the carve checkbox be active/deactive? Describe the problem with these two situations.
+
+2. Describe a way for implementing how an agent can avoid obstacles with not­carving option? 
+
+
+
+
+How it works:
+	Parts 1 & 3
+		Moving Agents
+			1. Click target destination
+			2. Click agent(s)
+				- Agents should move to destination unless near Nazgul agent. 
+					- Nazgul agent should repel agents
+				- Click agent(s) to deactivate
+		Moving Nazgul
+			1. Click target destination
+			2. Click Nazgul agent (top left corner) to move
+		Moving Obstacles
+			1. Click and drag purple box in center to move it.
+
+	Part 2
+		W = Move forward
+		S = Move backward
+		Space = Jump
+
+	Click Menu to return to title screen to switch between parts.
+
+
+
+Extra Credit Attempts:
+	- Nazgul Agent
+		- Nazgul (found in leftmost corner) repels other agents and can be moved around like other agents.
+		- Agents that move towards a target destination that Nazgul is in will not be able to proceed.
+	- Title Menu
+		- All 3 scenes seamlessly integrated in one title menu.
+
