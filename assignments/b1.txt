@@ -12,7 +12,6 @@ There is only one offline build because all three scenes have been integrated th
 
 
 
-
 Questions from Assignment Specification:
 1. Explain the difference (in behavior) between carving and not carving option for a NavMeshObstacle? When and why should the carve checkbox be active/deactive? Describe the problem with these two situations.
 
@@ -50,4 +49,7 @@ Extra Credit Attempts:
 		- Agents that move towards a target destination that Nazgul is in will not be able to proceed.
 	- Title Menu
 		- All 3 scenes seamlessly integrated in one title menu.
+	- 8 objects move in the scenes
+		- 4 Cylinders
+		- Cubes
 
