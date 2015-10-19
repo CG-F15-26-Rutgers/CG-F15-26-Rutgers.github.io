@@ -14,6 +14,12 @@ There is only one offline build because all three scenes have been integrated th
 
 Questions from Assignment Specification:
 1. Explain the difference (in behavior) between carving and not carving option for a NavMeshObstacle? When and why should the carve checkbox be active/deactive? Describe the problem with these two situations.
+	-If a NavMeshObstacle does not have carving enabled, then agents will not take the NavMeshObstacle into account while calculating their paths, but the agents will attempt to avoid it. If a NavMeshObstacle does have carving enabled, then a hole will be carved into the navmesh and agents will consider it in their pathfinding.
+
+Carving should be enabled when the agents need to intelligently avoid an obstacle. Carving should not be enabled if it is satisfactory for agents to simply try to sidestep around the obstacle.
+
+The problem with not carving is of course having less realistic pathfinding done by the agents. The problem with having carving enabled is it can be very computationally expensive if the NavMeshObstacle moves around frequently.
+
 
 2. Describe a way for implementing how an agent can avoid obstacles with not­carving option? 
 	- One can implement the GJK algorithm for collision detection.
