@@ -17,7 +17,7 @@ Questions from Assignment Specification:
 1. Explain the difference (in behavior) between carving and not carving option for a NavMeshObstacle? When and why should the carve checkbox be active/deactive? Describe the problem with these two situations.
 
 2. Describe a way for implementing how an agent can avoid obstacles with not­carving option? 
-
+	- One can implement the GJK algorithm for collision detection.
 
 
 
