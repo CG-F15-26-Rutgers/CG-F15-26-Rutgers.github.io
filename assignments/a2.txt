@@ -1,0 +1,55 @@
+CS428
+Assignment A2 Documentation
+Group 26
+Jon Lee(jl1424), Anthony Castronuovo(ajc320), Jake Taubner(jdt97)
+
+Link to Github:
+https://github.com/CG-F15-26-Rutgers/SteerLite/
+
+Questions from Assignment Specification:
+1. Explain the difference (in behavior) between carving and not carving option for a NavMeshObstacle? When and why should the carve checkbox be active/deactive? Describe the problem with these two situations.
+	-If a NavMeshObstacle does not have carving enabled, then agents will not take the NavMeshObstacle into account while calculating their paths, but the agents will attempt to avoid it. If a NavMeshObstacle does have carving enabled, then a hole will be carved into the navmesh and agents will consider it in their pathfinding.
+
+Carving should be enabled when the agents need to intelligently avoid an obstacle. Carving should not be enabled if it is satisfactory for agents to simply try to sidestep around the obstacle.
+
+The problem with not carving is of course having less realistic pathfinding done by the agents. The problem with having carving enabled is it can be very computationally expensive if the NavMeshObstacle moves around frequently.
+
+
+2. Describe a way for implementing how an agent can avoid obstacles with not­carving option? 
+	- One can implement the GJK algorithm for collision detection.
+
+
+
+How it works:
+	Parts 1 & 3
+		Moving Agents
+			1. Click target destination
+			2. Click agent(s)
+				- Agents should move to destination unless near Nazgul agent. 
+					- Nazgul agent should repel agents
+				- Click agent(s) to deactivate
+		Moving Nazgul
+			1. Click target destination
+			2. Click Nazgul agent (top left corner) to move
+		Moving Obstacles
+			1. Click and drag purple box in center to move it.
+
+	Part 2
+		W = Move forward
+		S = Move backward
+		Space = Jump
+
+	Click Menu to return to title screen to switch between parts.
+
+
+
+Extra Credit Attempts:
+	- Nazgul Agent
+		- Nazgul (found in leftmost corner) repels other agents and can be moved around like other agents.
+		- Agents that move towards a target destination that Nazgul is in will not be able to proceed.
+	- Title Menu
+		- All 3 scenes seamlessly integrated in one title menu.
+	- 8 objects move in the scenes
+		- 4 Cylinders
+		- Cubes
+
