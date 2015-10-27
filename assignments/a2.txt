@@ -7,41 +7,39 @@ Link to Github:
 https://github.com/CG-F15-26-Rutgers/SteerLite/
 
 
-Terminal Output for Part 1
- Collision detected between polygon No.0 and No.1 with a penetration depth of 2 and penetration vector of (0,0,-1)
-
- Collision detected between polygon No.0 and No.3 with a penetration depth of 0.707107 and penetration vector of (0.707107,0,-0.707107)
-
+Terminal Output for Part A
+ Collision detected between polygon No.0 and No.1 with a penetration depth of 0.707107 and penetration vector of (0.707107,0,0.707107)
+ 
+ Collision detected between polygon No.0 and No.2 with a penetration depth of 0.707107 and penetration vector of (0.707107,0,-0.707107)
+ 
+ NO collision detected between polygon No.0 and No.3
+ 
  NO collision detected between polygon No.0 and No.4
-
- NO collision detected between polygon No.0 and No.5
-
- Collision detected between polygon No.1 and No.2 with a penetration depth of 1 and penetration vector of (0,0,1)
-
- Collision detected between polygon No.1 and No.3 with a penetration depth of 1.34164 and penetration vector of (0.894427,0,0.447214)
-
- Collision detected between polygon No.1 and No.4 with a penetration depth of 1.34164 and penetration vector of (0.894427,0,0.447214)
-
- Collision detected between polygon No.1 and No.5 with a penetration depth of -nan(ind) and penetration vector of (-nan(ind),-nan(ind),-nan(ind))
-
+ 
+ Collision detected between polygon No.0 and No.5 with a penetration depth of 2 and penetration vector of (0,0,-1)
+ 
+ NO collision detected between polygon No.1 and No.2
+ 
+ NO collision detected between polygon No.1 and No.3
+ 
+ Collision detected between polygon No.1 and No.4 with a penetration depth of 2.68328 and penetration vector of (-0.447214,0,-0.894427)
+ 
+ Collision detected between polygon No.1 and No.5 with a penetration depth of 1 and penetration vector of (0,0,-1)
+ 
  NO collision detected between polygon No.2 and No.3
-
- Collision detected between polygon No.2 and No.4 with a penetration depth of 5 and penetration vector of (1,0,0)
-
- NO collision detected between polygon No.2 and No.5
-
-Collision detected between polygon No.3 and No.4 with a penetration depth of 0.744208 and penetration vector of (0.496139,0,0.868243)
-
- NO collision detected between polygon No.3 and No.5
-
- Collision detected between polygon No.4 and No.5 with a penetration depth of 2.59973 and penetration vector of (0.371391,0,0.928477)
-
-
-Terminal Output for Part 2
-Collision detected between polygon No.0 and No.1 with a penetration depth of 3.15296 and penetration vector of (0.242536,0,0.970143)
+ 
+ Collision detected between polygon No.2 and No.4 with a penetration depth of 0.744208 and penetration vector of (0.496139,0,0.868243)
+ 
+ Collision detected between polygon No.2 and No.5 with a penetration depth of 1.34164 and penetration vector of (-0.894427,0,-0.447214)
+ 
+ Collision detected between polygon No.3 and No.4 with a penetration depth of 2.59973 and penetration vector of (-0.371391,0,-0.928477)
+ 
+ Collision detected between polygon No.3 and No.5 with a penetration depth of 1.78885 and penetration vector of (-0.447214,0,0.894427)
+ 
+ Collision detected between polygon No.4 and No.5 with a penetration depth of 1.34164 and penetration vector of (-0.894427,0,-0.447214)
 
 
-Terminal Output for Part 3
+Terminal Output for Part B
 Collision detected between polygon No.0 and No.1 with a penetration depth of 3.15296 and penetration vector of (0.242536,0,0.970143)
 
 
