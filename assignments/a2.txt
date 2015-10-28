@@ -3,11 +3,19 @@ Assignment A2 Documentation
 Group 26
 Jon Lee(jl1424), Anthony Castronuovo(ajc320), Jake Taubner(jdt97)
 
-Link to Github:
+
+Links
+-----
+Github:
 https://github.com/CG-F15-26-Rutgers/SteerLite/
 
+Blog: 
+http://cg-f15-26-rutgers.github.io/
 
-Terminal Output for Part A
+
+Terminal Outputs
+----------------
+Part A
  Collision detected between polygon No.0 and No.1 with a penetration depth of 0.707107 and penetration vector of (0.707107,0,0.707107)
  
  Collision detected between polygon No.0 and No.2 with a penetration depth of 0.707107 and penetration vector of (0.707107,0,-0.707107)
@@ -39,11 +47,13 @@ Terminal Output for Part A
  Collision detected between polygon No.4 and No.5 with a penetration depth of 1.34164 and penetration vector of (-0.894427,0,-0.447214)
 
 
-Terminal Output for Part B
+Part B
 Collision detected between polygon No.0 and No.1 with a penetration depth of 3.15296 and penetration vector of (0.242536,0,0.970143)
 
 
-Blog: http://cg-f15-26-rutgers.github.io/
+Part C
+Collision detected between polygon No.0 and No.1 with a penetration depth of 3.15296 and penetration vector of (0.242536,0,0.970143)
+
 
 
 
