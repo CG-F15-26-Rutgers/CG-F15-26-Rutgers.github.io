@@ -1,0 +1,24 @@
+CS428
+Assignment A3 Documentation
+Group 26
+Jon Lee(jl1424), Anthony Castronuovo(ajc320), Jake Taubner(jdt97)
+
+Links
+-----
+Github:
+https://github.com/CG-F15-26-Rutgers/SteerLite/
+
+Blog: 
+http://cg-f15-26-rutgers.github.io/
+
+Following the slides provided, we were able to write code for the social forces AI. The code built and compiled however, when attempting to run steersim, the terminal would output:
+
+ERROR: exception caught in main:
+Could not find the module named "sfAI".
+  tried user-specified search path: ./sfAI.dll
+  tried engine's search path: ./sfAI.dll
+  tried the current directory: sfAI.dll
+
+We thought this problem might have arisen due to not building or compiling correctly, so we debugged extensively but we couldn't find the problem.
+
+We also noticed in the build log there was one file that was skipped, maybe that could have led to the erroneous output. 
