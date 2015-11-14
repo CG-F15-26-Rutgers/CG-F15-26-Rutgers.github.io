@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Assignment A3</title>
+    <title>Assignment A4</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -27,8 +27,8 @@
 </nav>
 
 <div class = "contianer table">
-    <h1><center>Assignment A3</center></h1>
-    <h2><center>Social Forces</center></h2>
+    <h1><center>Assignment A4</center></h1>
+    <h2><center>A*</center></h2>
     <hr>
 </div>
 <div class = "container">
@@ -40,44 +40,31 @@
                 <br>
             </p>
             <p class = "pdesc">
-                <b class = "ptitle">TestCase 1</b>
-                <br>
-                $ ./steersim -testcase bottleneck-evacuation.xml -ai sfAI
-                <br>
+                <b class = "ptitle">Basics</b>
 				<i>
-					Bottlneck Description.
+					For this assignment, we implemented a basic pathfinding algorithm, A*. In it we have two heurstic cost estimate functions that are available to use. Manhattan Distance and Euclidean Distance. The two testcases used are very simple, so it is a little difficult to see the difference between the two. 
                 </i>
             </p>
+			<p class = "pdesc">
+				<b class = "ptitle">Assignment Breakdown</b>
+				<ol>
+					<li><b>Part 1</b></li>
+					<i>Part 1 was the bulk of the assignment. We implemented A*, and the manhattan and euclidean distance heuristic cost functions here. </i>
+					
+					<li><b>Part 2</b></li>
+					<i>For part 2, we had to implement a tie-breaker for nodes with the same smallest f-value by determining based on the g-value. We used the (higher or lower) g-value.</i>
+					
+					<li><b>Part 3</b></li>
+					<i>For part 3, we had to implement an increase in the cost to the diagonal neighbors. Initially, all the neighbors had the same cost. </i>
+					
+					<li><b>Part 4</b></li>
+					<i>For part 4, we had to implement an increase to the weight of the hueristic cost. Essentially, to create weighted A*. We considered the bigger g-value for setting the tie-breaker between f-values.</i>
+					
+				</ol>
+			</p>
             <p class = "pdesc">
-                <b class = "ptitle">TestCase 2</b>
-                <br>
-                $ ./steersim -testcase hallway-one-way.xml -ai sfAI
-                <br>
-                <i>
-					Hallway One Way Description.
-                </i>
-            </p>
-            <p class = "pdesc">
-                <b class = "ptitle">TestCase 3</b>
-                <br>
-                $ ./steersim -testcase hallway-two-way.xml -ai sfAI
-                <br>
-                <i>
-                    Hallway Two Way Description.
-                </i>
-            </p>
-            <p class = "pdesc">
-                <b class = "ptitle">TestCase 4</b>
-                <br>
-                $ ./steersim -testcase hallway-four-way.xml -ai sfAI
-                <br>
-                <i>
-					Hallway Four Way Description
-				</i>
-            </p>
-            <p class = "pdesc">
-            <center><a target = "blank" href = "a3.txt">Documentation</a> |
-                <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/SteerLite/steerlib/src/GJK_EPA.cpp">Github</a></center>
+            <center><a target = "blank" href = "a4.txt">Documentation</a> |
+                <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/CStar/blob/master/steerlib/src/AStarPlanner.cpp">Github</a></center>
             </p>
         </div>
         <div class = "col-md-6 links">
