@@ -1,116 +1,58 @@
 <html>
-<head>
-  <title>Assignment A2</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <head>
+	<title>Assignment B2</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-  <link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/style.css">
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <!-- Static navbar -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+	<!-- Static navbar -->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
         </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="home.html">Assignments</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.html">Assignments</a></li>
+        </ul>
+      </div>
     </nav>
 
-  <div class = "contianer table">
-    <h1><center>Assignment B2</center></h1>
-    <h2><center>Behavior Trees</center></h2>
-    <hr>
-  </div>
-  <div class = "container">
-    <div class = "row">
-      <div class = "col-md-6 desc">
-        <h3>Description</h3>
-        <p class = "pdesc">
-          <b class = "ptitle">Implementation</b>
-          <br>
-          Polygon Triangulation via Ear Clipping
-          <p class = "pdesc">
-            <b class = "ptitle">What is an ear?</b>
-            <br>
-            An ear of a polygon is a vertex determined by its two neighbors. Let's say we have vertex <code>p</code> and its neighbors are <code>(p+1)</code> and <code>(p-1)</code>. 
-            <br>
-            <code>p</code> is an ear if the diagonal from <code>(p+1)</code> to <code>(p-1)</code> lies within the the polygon. If the diagonal lies on an edge of the polygon, it's not considered an ear.
-          </p>
-          <p class = "pdesc">
-            <b class = "ptitle">How do you find them?</b>
-            <br>
-            We get go through each point and get the midpoint between its two neighbors. If the midpoint is in the polygon, then you know that that point is an ear. We also tested if the midpoint was a point of the shape. In which case, the point is not an ear. We then push the point onto the queue of ears.
-          </p>
-          <p class = "pdesc">
-            <b class = "ptitle">How do you triangulate?</b>
-            <br>
-            We take the first ear in the queue and retrieve its neighbors. We construct a triangle out of the three points and store it in a vector. Afterwards, we remove the point wherever it's found. The neighbors that share the point get relinked to each other. Then we dequeue the ear and update the ears queue by going through the modified polygon to find new ears.
-          </p>
-          <p class = "pdesc">
-            <b class = "ptitle">How do you detect collisions with GJK?</b>
-            <br>
-            This was the simplest part of the entire process. After triangulating the shapes, we test each triangle from shapeA with each triangle from shapeB. If there two triangles are colliding and GJK detects it, the process stops and returns true.
-          </p>
-        </p>
-        <p class = "pdesc">
-          <b class = "ptitle">Part D</b>
-          <br>
-          $ ./steersim -testcase polygons3 -ai collisionAI
-          <br>
-          <center><img src = "a2-concave/poly3.png" height="315"></center>
-        </p>
-        <p class = "pdesc">
-          <b class = "ptitle">Part D (Modified polygons3 to have collision)</b>
-          <br>
-          $ ./steersim -testcase polygons4 -ai collisionAI
-          <br>
-          <center><img src = "a2-concave/poly4.png" height="315"></center>
-        </p>
-        <p class = "pdesc">
-          <b class = "ptitle">Resources</b>
-          <br>
-          <a href = "http://www.personal.kent.edu/~rmuhamma/Compgeometry/MyCG/TwoEar/two-ear.htm" target ="blank">The Two Ears Theorem</a>
-          <br>
-          <a href = "http://www.geometrictools.com/Documentation/TriangulationByEarClipping.pdf" target ="blank">Triangulation by Ear Clipping</a>
-          <br>
-          <a href = "https://www.cs.ucsb.edu/~suri/cs235/Triangulation.pdf" target ="blank">Triangulation</a>
-        </p>
-      </div>
-      <div class = "col-md-6 links">
-        <h3>Video</h3>
+	<div class = "contianer table">
+      <h1><center>Assignment B2</center></h1>
+      <h2><center>Behavior Trees</center></h2>
+      <hr>
+	</div>
+	<div class = "container">
+      <div class = "row">
+		<div class = "col-md-6 links">
+          <h3>Video</h3>
           <p>
-          <iframe width="400" height="225" src="https://www.youtube.com/embed/5MKJoZj4EFA" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/B0krkjbDjig" frameborder="0" allowfullscreen></iframe>
           </p>
           <br>
-          <br>
-          <p>
-          <iframe width="400" height="225" src="https://www.youtube.com/embed/-uGv9AbbHQ0" frameborder="0" allowfullscreen></iframe>
-          </p>
+		</div>
       </div>
-    </div>
 
-    <hr>
+      <hr>
 
-    <footer>
-      <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
-        <br> 
-        Computer Graphics Group 26
-        <br>
-        Fall 2015</p>
-    </footer>
-  </div>
+      <footer>
+		<p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
+          <br> 
+          Computer Graphics Group 26
+          <br>
+          Fall 2015</p>
+      </footer>
+	</div>
 
-</body>
+  </body>
 </html>
 
 
