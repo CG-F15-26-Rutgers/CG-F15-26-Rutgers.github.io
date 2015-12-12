@@ -1,100 +1,105 @@
 <html>
-<head>
-    <title>Assignment A4</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <head>
+        <title>Assignment A4</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-    <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/style.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-<!-- Static navbar -->
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html">Assignments</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
+        <div class = "contianer table">
+            <h1><center>Assignment A4</center></h1>
+            <h2><center>A*</center></h2>
+            <hr>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="home.html">Assignments</a></li>
-        </ul>
-    </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-</nav>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-6 desc">
+                    <h3>Description</h3>
+                    <p class = "pdesc">
+                        <b class = "ptitle">Implementation</b>
+                        <br>
+                    </p>
+                    <p class = "pdesc">
+                        <b class = "ptitle">Basics</b>
+                        <i>
+                            For this assignment, we implemented a basic pathfinding algorithm, A*. In it we have two heurstic cost estimate functions that are available to use. Manhattan Distance and Euclidean Distance. The two testcases used are very simple, so it is a little difficult to see the difference between the two. 
+                        </i>
+                    </p>
+                    <p class = "pdesc">
+                        <b class = "ptitle">Assignment Breakdown</b>
+                        <ol>
+                            <li><b>Part 1</b></li>
+                            <i>Part 1 was the bulk of the assignment. We implemented A*, and the manhattan and euclidean distance heuristic cost functions here. </i>
+                            <br>
+                            <a href="a4-1.html"><center>Click here</center></a>
+                            <br>
 
-<div class = "contianer table">
-    <h1><center>Assignment A4</center></h1>
-    <h2><center>A*</center></h2>
-    <hr>
-</div>
-<div class = "container">
-    <div class = "row">
-        <div class = "col-md-6 desc">
-            <h3>Description</h3>
-            <p class = "pdesc">
-                <b class = "ptitle">Implementation</b>
-                <br>
-            </p>
-            <p class = "pdesc">
-                <b class = "ptitle">Basics</b>
-				<i>
-					For this assignment, we implemented a basic pathfinding algorithm, A*. In it we have two heurstic cost estimate functions that are available to use. Manhattan Distance and Euclidean Distance. The two testcases used are very simple, so it is a little difficult to see the difference between the two. 
-                </i>
-            </p>
-			<p class = "pdesc">
-				<b class = "ptitle">Assignment Breakdown</b>
-				<ol>
-					<li><b>Part 1</b></li>
-					<i>Part 1 was the bulk of the assignment. We implemented A*, and the manhattan and euclidean distance heuristic cost functions here. </i>
-					<br>
-                    <a href="a4-1.html"><center>Click here</center></a>
-                    <br>
+                            <li><b>Part 2</b></li>
+                            <i>For part 2, we had to implement a tie-breaker for nodes with the same smallest f-value by determining based on the g-value. We used the (higher or lower) g-value.</i>
+                            <br>
+                            <a href="a4-2.html"><center>Click here</center></a>
+                            <br>
 
-					<li><b>Part 2</b></li>
-					<i>For part 2, we had to implement a tie-breaker for nodes with the same smallest f-value by determining based on the g-value. We used the (higher or lower) g-value.</i>
-					<br>
-                    <a href="a4-2.html"><center>Click here</center></a>
-                    <br>
+                            <li><b>Part 3</b></li>
+                            <i>For part 3, we had to implement an increase in the cost to the diagonal neighbors. Initially, all the neighbors had the same cost. </i>
+                            <br>
+                            <a href="a4-3.html"><center>Click here</center></a>
+                            <br>
 
-					<li><b>Part 3</b></li>
-					<i>For part 3, we had to implement an increase in the cost to the diagonal neighbors. Initially, all the neighbors had the same cost. </i>
-					<br>
-                    <a href="a4-3.html"><center>Click here</center></a>
-                    <br>
+                            <li><b>Part 4</b></li>
+                            <i>For part 4, we had to implement an increase to the weight of the hueristic cost. Essentially, to create weighted A*. We considered the bigger g-value for setting the tie-breaker between f-values.</i> 
+                            <br>
+                            <a href="a4-4.html"><center>Click here</center></a>
+                            <br>
+                            
+                            <li><b>Extra Credit</b></li>
+                            <i>For extra credit, we merged A* search with the social forces AI.</i> 
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/3hh4naPvzb4" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/8hu3hIU8bLk" frameborder="0" allowfullscreen></iframe>
 
-					<li><b>Part 4</b></li>
-					<i>For part 4, we had to implement an increase to the weight of the hueristic cost. Essentially, to create weighted A*. We considered the bigger g-value for setting the tie-breaker between f-values.</i> 
+                        </ol>
+                    </p>
+                    <p class = "pdesc">
+                        <center>
+                            <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/CStar/blob/master/steerlib/src/AStarPlanner.cpp">Github</a>
+                        </center>
+                    </p>
+                </div>
+                
+            </div>
+
+            <hr>
+
+            <footer>
+                <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
                     <br>
-                    <a href="a4-4.html"><center>Click here</center></a>
+                    Computer Graphics Group 26
                     <br>
-					
-				</ol>
-			</p>
-            <p class = "pdesc">
-            <center>
-                <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/CStar/blob/master/steerlib/src/AStarPlanner.cpp">Github</a>
-			</center>
-            </p>
+                    Fall 2015</p>
+            </footer>
         </div>
-        
-    </div>
 
-    <hr>
-
-    <footer>
-        <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
-            <br>
-            Computer Graphics Group 26
-            <br>
-            Fall 2015</p>
-    </footer>
-</div>
-
-</body>
+    </body>
 </html>
 
 
