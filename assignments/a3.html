@@ -1,110 +1,218 @@
 <html>
-<head>
-    <title>Assignment A3</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<head>
+		<title>Assignment A3</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-    <link rel="stylesheet" href="../style/style.css">
+		<link rel="stylesheet" href="../style/style.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-<!-- Static navbar -->
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="home.html">Assignments</a></li>
-        </ul>
-    </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-</nav>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="home.html">Assignments</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
 
-<div class = "contianer table">
-    <h1><center>Assignment A3</center></h1>
-    <h2><center>Social Forces</center></h2>
-    <hr>
-</div>
-<div class = "container">
-    <div class = "row">
-        <div class = "col-md-6 desc">
-            <h3>Description</h3>
-            <p class = "pdesc">
-                <b class = "ptitle">Implementation</b>
-                <br>
-            </p>
-            <p class = "pdesc">
-                <b class = "ptitle">TestCase 1</b>
-                <br>
-                $ ./steersim -testcase bottleneck-evacuation.xml -ai sfAI
-                <br>
-				<i>
-					Bottlneck Description.
-                </i>
-            </p>
-            <p class = "pdesc">
-                <b class = "ptitle">TestCase 2</b>
-                <br>
-                $ ./steersim -testcase hallway-one-way.xml -ai sfAI
-                <br>
-                <i>
-					Hallway One Way Description.
-                </i>
-            </p>
-            <p class = "pdesc">
-                <b class = "ptitle">TestCase 3</b>
-                <br>
+		<div class = "container table">
+			<h1><center>Assignment A3</center></h1>
+			<h2><center>Social Forces</center></h2>
+			<hr>
+		</div>
+		<div class = "container">
+			<div class = "row">
+				<div class = "col-md-6 desc">
+					<h3>Description</h3>
+					<p class = "pdesc">
+						<b class = "ptitle">Implementation</b>
+						<br>
+						We implemented the social forces model as discussed in class, however we use A* search to guide the agents.
+						This prevents them from blindly walking towards their end goal even if an obstacle is preventing them from progressing further.
+						The benefits of merging social forces with A* are clearly seen in the bottleneck-evacuation testcase.
+					</p>
+					<p class = "pdesc">
+						<b class = "ptitle">TestCase 1: bottleneck-evacuation </b>
+						<br>
+						<code>
+                    $ ./steersim -testcase bottleneck-evacuation.xml -ai sfAI
+						</code>
+						<p>
+							Score for bottleneck-evacuation with 2000 frames: <br>
+							total number of agents: 200<br>
+							avg. number of collisions per agent: 52.62 <br>
+							average time spent by one agent: 99.6527 <br>
+							average energy spent by one agent: 1873.58 <br>
+							sum of instantaneous accelerations: 4748.21 <br>
+							(alpha, beta, gamma, delta) weights: (50,1,1,1) <br>
+							weighted sum: 50*52.62 + 1*99.6527 + 1*1873.58 + 1*4748.21 = 9352.44 <br>
+							final score: 9352.44 <br>
+						</p>
+					</p>
+					<p class = "pdesc">
+						<b class = "ptitle">TestCase 2: hallway-one-way</b>
+						
+						<code>
+							<br>
+                    $ ./steersim -testcase hallway-one-way.xml -ai sfAI
+						</code>
+						<p>
+							Score for hall-way-one-way: <br>
+							total number of agents: 200 <br>
+							avg. number of collisions per agent: 0 <br>
+							average time spent by one agent: 84.3658 <br>
+							average energy spent by one agent: 1501.65 <br>
+							sum of instantaneous accelerations: 9.2831 <br>
+							(alpha, beta, gamma, delta) weights: (50,1,1,1) <br>
+							weighted sum: 50*0 + 1*84.3658 + 1*1501.65 + 1*9.2831 = 1595.3 <br>
+							final score: 1595.3 <br>
+						</p>
+					</p>
+					<p class = "pdesc">
+						<b class = "ptitle">TestCase 3: hallway-two-way</b>
+						<br>
+						<code>
                 $ ./steersim -testcase hallway-two-way.xml -ai sfAI
-                <br>
-                <i>
-                    Hallway Two Way Description.
-                </i>
-            </p>
-            <p class = "pdesc">
-                <b class = "ptitle">TestCase 4</b>
-                <br>
+						</code>
+						<p>
+							Score for hallway-two-way: <br>
+							total number of agents: 200 <br>
+							avg. number of collisions per agent: 0.61 <br>
+							average time spent by one agent: 73.8064 <br>
+							average energy spent by one agent: 1295.55 <br>
+							sum of instantaneous accelerations: 181.184 <br>
+							(alpha, beta, gamma, delta) weights: (50,1,1,1) <br>
+							weighted sum: 50*0.61 + 1*73.8064 + 1*1295.55 + 1*181.184 = 1581.04 <br>
+							final score: 1581.04 <br>
+						</p>
+					</p>
+					<p class = "pdesc">
+						<b class = "ptitle">TestCase 4: hallway-four-way</b>
+						<br>
+						<code>
                 $ ./steersim -testcase hallway-four-way.xml -ai sfAI
-                <br>
-                <i>
-					Hallway Four Way Description
-				</i>
-            </p>
-            <p class = "pdesc">
-            <center><a target = "blank" href = "a3.txt">Documentation</a> |
-                <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/SteerLite/steerlib/src/GJK_EPA.cpp">Github</a></center>
-            </p>
-        </div>
-        <div class = "col-md-6 links">
-            <h3>Video</h3>
-            <p>
-                <iframe width="400" height="225" src="https://www.youtube.com/embed/5MKJoZj4EFA" frameborder="0" allowfullscreen></iframe>
-            </p>
-            <br>
-            <br>
-            <p>
-                <iframe width="400" height="225" src="https://www.youtube.com/embed/-uGv9AbbHQ0" frameborder="0" allowfullscreen></iframe>
-            </p>
-        </div>
-    </div>
+						</code>
+						<p>
+							Score for hallway-four-way: <br>
+							total number of agents: 400 <br>
+							avg. number of collisions per agent: 1.205 <br>
+							average time spent by one agent: 75.7607 <br>
+							average energy spent by one agent: 1333.9 <br>
+							sum of instantaneous accelerations: 286.387 <br>
+							(alpha, beta, gamma, delta) weights: (50,1,1,1) <br>
+							weighted sum: 50*1.205 + 1*75.7607 + 1*1333.9 + 1*286.387 = 1756.3 <br>
+							final score: 1756.3 <br>
+						</p>
+					</p>
 
-    <hr>
+					<p class = "pdesc">
+						<b class = "ptitle">Extra credit</b>
+						<br>
+						The agents perform reasonbly well in testcases containing non-axis aligned obstacles.
+						We have not attempted to generalize social forces to three spatial dimensions.
+					</p>
 
-    <footer>
-        <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
-            <br>
-            Computer Graphics Group 26
-            <br>
-            Fall 2015</p>
-    </footer>
-</div>
+					<p class = "pdesc">
+						<b class = "ptitle">TestCase 5: hallway-four-way-rounded </b>
+						<br>
+						<code>
+                $ ./steersim -testcase hallway-four-way-rounded.xml -ai sfAI
+						</code>
+						<p>
+							Score for hallway-four-way-rounded: <br>
+							total number of agents: 400 <br>
+							avg. number of collisions per agent: 1.005 <br>
+							average time spent by one agent: 75.6843 <br>
+							average energy spent by one agent: 1333.37 <br>
+							sum of instantaneous accelerations: 276.973 <br>
+							(alpha, beta, gamma, delta) weights: (50,1,1,1) <br>
+							weighted sum: 50*1.005 + 1*75.6843 + 1*1333.37 + 1*276.973 = 1736.28 <br>
+							final score: 1736.28 <br>
+						</p>
+					</p>
 
-</body>
+					<p class = "pdesc">
+						<b class = "ptitle">TestCase 6: hallway-four-way-roundabout</b>
+						<br>
+						<code>
+                $ ./steersim -testcase hallway-four-way-roundabout.xml -ai sfAI
+						</code>
+						<p>
+							Score for hallway_four_way_roundabout: <br>
+							total number of agents: 400 <br>
+							avg. number of collisions per agent: 1.2 <br>
+							average time spent by one agent: 75.7445 <br>
+							average energy spent by one agent: 1334.06 <br>
+							sum of instantaneous accelerations: 286.542 <br>
+							(alpha, beta, gamma, delta) weights: (50,1,1,1) <br>
+							weighted sum: 50*1.2 + 1*75.7445 + 1*1334.06 + 1*286.542 = 1756.35 <br>
+							final score: 1756.35 <br>
+						</p>
+					</p>
+
+					<p class = "pdesc">
+						<b class = "ptitle">TestCase 7: hallway-four-way-rounded-roundabout</b>
+						<br>
+						<code>
+                $ ./steersim -testcase hallway-four-way-rounded-roundabout.xml -ai sfAI
+						</code>
+						<p>					
+							Score for hallway_four_way_rounded_roundabout: <br>
+							total number of agents: 400 <br>
+							avg. number of collisions per agent: 1.205 <br>
+							average time spent by one agent: 75.7539 <br>
+							average energy spent by one agent: 1333.95 <br>
+							sum of instantaneous accelerations: 286.528 <br>
+							(alpha, beta, gamma, delta) weights: (50,1,1,1) <br>
+							weighted sum: 50*1.205 + 1*75.7539 + 1*1333.95 + 1*286.528 = 1756.49 <br>
+							final score: 1756.49 <br>
+						</p>
+					</p>
+					
+					<p class = "pdesc">
+						<center><a target = "blank" href = "a3.txt">Documentation</a> |
+							<a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/SteerLite/steerlib/src/GJK_EPA.cpp">Github</a></center>
+					</p>
+				</div>
+				<div class = "col-md-6 links">
+					<h3>Video</h3>
+					<p>
+						Due to hardware constraints, some visual artifacts may appear in the recordings.
+					</p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/1Yn68tuQVkg" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/tgps13kw6n8" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/breNqw6Qgq4" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/WhWQarCjaHs" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/BDUEy3Y8O3g" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/_ZzvjRf6-BA" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/0KuL1Q6SQlg" frameborder="0" allowfullscreen></iframe>
+					</p>
+				</div>
+			</div>
+
+			<hr>
+
+			<footer>
+				<p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
+					<br>
+					Computer Graphics Group 26
+					<br>
+					Fall 2015</p>
+			</footer>
+		</div>
+
+	</body>
 </html>
 
 
