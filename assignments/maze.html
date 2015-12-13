@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>Maze</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="../style/style.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="home.html">Assignments</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+<div class = "contianer table">
+    <h1><center>Assignment A5</center></h1>
+    <h2><center>Crowd Simulation Challenge</center></h2>
+    <hr>
+</div>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-6 desc">
+            <h3>Description</h3>
+            <p class = "pdesc">
+                <b class = "ptitle">Maze</b>
+                <br>
+            </p>
+            <p class = "pdesc">
+                <b class = "ptitle">Breakdown</b>
+                <br>
+                This is a straightforward maze.
+                <br>
+                <br>
+                We just utilized A* for this testcase. We attempted to use different goal queues instead of A* but that yielded higher benchmarks. Thus, we stuck with A* even though it is still a really high score.
+            </p>
+
+            <table class = "table table-condensed">
+                <thead>
+                    <tr>
+                        <th>SteerBench Scores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Number of Agents</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Average Collisions</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Average Time Spent</td>
+                        <td>512.848</td>
+                    </tr>
+                    <tr>
+                        <td>Average Energy Spent</td>
+                        <td>8552.42</td>
+                    </tr>
+                    <tr>
+                        <td>Sum of Instantaneous Accelerations</td>
+                        <td>4053.34</td>
+                    </tr>
+                    <tr>
+                        <td>Final Score</td>
+                        <td>14018.6</td>
+                    </tr>   
+                </tbody>
+            </table>
+
+            <p class = "pdesc">
+            <center><a href = "a5.html">Back</a> |
+                <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/SteerLiteFinal">Github</a></center>
+            </p>
+        </div>
+        <div class = "col-md-6 links">
+            <h3>Video</h3>
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pvYKuI8VtK0" frameborder="0" allowfullscreen></iframe>
+            </p>
+            <br>
+            <p>Click <a target = "blank" href = "https://www.youtube.com/playlist?list=PLj7LuRn-Bip2rso0bKnFwFfIAOidIbMOw">here</a> the complete playlist</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
+            <br>
+            Computer Graphics Group 26
+            <br>
+            Fall 2015</p>
+    </footer>
+</div>
+
+</body>
+</html>

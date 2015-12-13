@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Plane Egress</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="../style/style.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="home.html">Assignments</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+<div class = "contianer table">
+    <h1><center>Assignment A5</center></h1>
+    <h2><center>Crowd Simulation Challenge</center></h2>
+    <hr>
+</div>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-6 desc">
+            <h3>Description</h3>
+            <p class = "pdesc">
+                <b class = "ptitle">Plane Ingress</b>
+                <br>
+            </p>
+            <p class = "pdesc">
+                <b class = "ptitle">Breakdown</b>
+                <br>
+                This testcase has some 105 agents exiting through two exits, on the left and on the right. Here we rearranged the goal for each agent depending on their position. (see video) If their position was greater than 0, the agents would exit to the left and if their position was less than 0, they would exit to the right. A goal was placed in the aisle in front of their row, at the end of the aisle respective to their exits, and out of the plane. Once out of the plane, we utilized runLongTermPlanning() to get to their targets efficiently.
+            </p>
+
+            <table class = "table table-condensed">
+                <thead>
+                    <tr>
+                        <th>SteerBench Scores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Number of Agents</td>
+                        <td>105</td>
+                    </tr>
+                    <tr>
+                        <td>Average Collisions</td>
+                        <td>2.26667</td>
+                    </tr>
+                    <tr>
+                        <td>Average Time Spent</td>
+                        <td>66.5785</td>
+                    </tr>
+                    <tr>
+                        <td>Average Energy Spent</td>
+                        <td>1136.84</td>
+                    </tr>
+                    <tr>
+                        <td>Sum of Instantaneous Accelerations</td>
+                        <td>343.629</td>
+                    </tr>
+                    <tr>
+                        <td>Final Score</td>
+                        <td>1660.38</td>
+                    </tr>   
+                </tbody>
+            </table>
+
+            <p class = "pdesc">
+            <center><a href = "a5.html">Back</a> |
+                <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/SteerLiteFinal">Github</a></center>
+            </p>
+        </div>
+        <div class = "col-md-6 links">
+            <h3>Video</h3>
+            <p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/P6SwsxHTukk" frameborder="0" allowfullscreen></iframe>
+            </p>
+            <br>
+            <p>Click <a target = "blank" href = "https://www.youtube.com/playlist?list=PLj7LuRn-Bip2rso0bKnFwFfIAOidIbMOw">here</a> the complete playlist</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
+            <br>
+            Computer Graphics Group 26
+            <br>
+            Fall 2015</p>
+    </footer>
+</div>
+
+</body>
+</html>

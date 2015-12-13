@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>Hallway Four Way Rounded Roundabout</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="../style/style.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html">Computer Graphics Group 26 - Fall 2015</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="home.html">Assignments</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+<div class = "contianer table">
+    <h1><center>Assignment A5</center></h1>
+    <h2><center>Crowd Simulation Challenge</center></h2>
+    <hr>
+</div>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-6 desc">
+            <h3>Description</h3>
+            <p class = "pdesc">
+                <b class = "ptitle">Hallway Four Way Rounded Roundabout</b>
+                <br>
+            </p>
+            <p class = "pdesc">
+                <b class = "ptitle">Breakdown</b>
+                <br>
+                A polygonal obstacle is dead center of a fourway intersection. First thing we did was make the agents go one direction as agents are going north, south, east, and west. 
+                <br>
+                <br>
+                A goal point was placed strategically at entrance for agents. A different goal point was placed for agents exiting. This prevented a mass amount of collisions as well as buildup at the entrances/exits.
+                <br>
+                <br>
+                Agents coming from the east are directed to the north then to the west then to their target. Agents in the north go to the west, then to the south, then to their target. This pattern continues for agents in the east and south.
+            </p>
+
+            <table class = "table table-condensed">
+                <thead>
+                    <tr>
+                        <th>SteerBench Scores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Number of Agents</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>Average Collisions</td>
+                        <td>0.4875</td>
+                    </tr>
+                    <tr>
+                        <td>Average Time Spent</td>
+                        <td>75.8879</td>
+                    </tr>
+                    <tr>
+                        <td>Average Energy Spent</td>
+                        <td>1342.49</td>
+                    </tr>
+                    <tr>
+                        <td>Sum of Instantaneous Accelerations</td>
+                        <td>578.608</td>
+                    </tr>
+                    <tr>
+                        <td>Final Score</td>
+                        <td>2021.36</td>
+                    </tr>   
+                </tbody>
+            </table>
+
+            <p class = "pdesc">
+            <center><a href = "a5.html">Back</a> |
+                <a target = "blank" href = "https://github.com/CG-F15-26-Rutgers/SteerLiteFinal">Github</a></center>
+            </p>
+        </div>
+        <div class = "col-md-6 links">
+            <h3>Video</h3>
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vFmqHDL7rGk" frameborder="0" allowfullscreen></iframe>
+            </p>
+            <br>
+            <p>Click <a target = "blank" href = "https://www.youtube.com/playlist?list=PLj7LuRn-Bip2rso0bKnFwFfIAOidIbMOw">here</a> the complete playlist</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Jon Lee, Anthony Castronuovo, Jake Taubner
+            <br>
+            Computer Graphics Group 26
+            <br>
+            Fall 2015</p>
+    </footer>
+</div>
+
+</body>
+</html>
