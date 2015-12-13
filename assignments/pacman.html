@@ -42,42 +42,18 @@
             <p class = "pdesc">
                 <b class = "ptitle">Breakdown</b>
                 <br>
-                Talk about it here
-            </p>
+                This testcase is modeled after the classic arcade game Pacman. This design turned out to be too complex for our AI to properly handle.
+				For example, if the agents spawn in the center of the map (where ghosts traditionally spawn in the real game) and are told to navigate
+				outside of the maze, they will attempt to walk through the walls. It is unclear why this happens. A similar problem occurs on the
+				office testcase, but only for a small number of agents. Most of the agents find their way through the office.
 
-            <table class = "table table-condensed">
-                <thead>
-                    <tr>
-                        <th>SteerBench Scores</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Number of Agents</td>
-                        <td>???</td>
-                    </tr>
-                    <tr>
-                        <td>Average Collisions</td>
-                        <td>???</td>
-                    </tr>
-                    <tr>
-                        <td>Average Time Spent</td>
-                        <td>???</td>
-                    </tr>
-                    <tr>
-                        <td>Average Energy Spent</td>
-                        <td>???</td>
-                    </tr>
-                    <tr>
-                        <td>Sum of Instantaneous Accelerations</td>
-                        <td>???</td>
-                    </tr>
-                    <tr>
-                        <td>Final Score</td>
-                        <td>???</td>
-                    </tr>   
-                </tbody>
-            </table>
+				<br>
+				Due to this problem, we have two groups of agents spawn in the upper corners of the maze and find their way to the center. The
+				agents don't seem to have any problem finding this goal. Since this left the bottom portion of the map unused, we have two other
+				groups of agents spawn in the lower corners and attempt to switch places. To differentiate this from other testcases, we used a large
+				number of very small agents. The end result looks like a low-energy particle collider. The large number of agents occupying a single
+				cell means that the steerbench program does not work on this testcase.
+            </p>
 
             <p class = "pdesc">
             <center><a href = "a5.html">Back</a> |
@@ -90,7 +66,7 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/oSYePkfGlP4" frameborder="0" allowfullscreen></iframe>
             </p>
             <br>
-            <p>Click <a target = "blank" href = "https://www.youtube.com/playlist?list=PLj7LuRn-Bip2rso0bKnFwFfIAOidIbMOw">here</a> the complete playlist</p>
+            <p>Click <a target = "blank" href = "https://www.youtube.com/playlist?list=PLj7LuRn-Bip2rso0bKnFwFfIAOidIbMOw">here</a> for the complete playlist</p>
         </div>
     </div>
 
