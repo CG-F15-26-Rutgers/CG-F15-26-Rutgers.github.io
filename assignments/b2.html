@@ -24,6 +24,57 @@
         </ul>
       </div>
     </nav>
+	
+	<div class = "col-md-6 desc" style="text-align:justify">
+          <h3 style="text-align:center">Description</h3>
+		  <br>
+          <p class = "pdesc">
+            <b class = "ptitle">Implementation</b>
+            <br>
+		</p>
+		<p style="text-align:center">We implemented two custom affordances using FinalIK.
+		<p style="text-align:center">
+			- Pick Up Basketball
+			<br>
+			- Shoot Basketball
+		</p>
+
+The tree is as follows:
+<br>
+<ol>
+
+<li>Root:</li>
+<ol><li>Calls OrientAndWave, WalkAndTalk, DeltreseWalkTo, ThatDamnDeltrese, and CallDeltrese</li></ol>
+<br>
+<li>Children Layer 1: </li>
+	<ol>
+	<li>OrientAndWave orients person1 and person2 and P1Wave, and P2Wave</li>
+
+	<li>WalkAndTalk makes person2 move to person1, orients them to face each other, and then calls Talk</li>
+
+	<li>DeltreseWalkTo just makes Deltrese move to a specified location in the world</li>
+
+	<li>ThatDamnDeltrese makes person1 and person2 head look at Deltrese as she walks by. (For some reason they only look at Deltrese's starting position and do not follow her as intended)</li>
+
+	<li>CallDeltrese makes person2 try to get Deltrese's attention by waving or by phone call, and then calls Argue</li>
+	</ol>
+<br>
+<li>Children Layer 2:
+<ol>
+	<li>Talk returns a SequenceShuffle of a set of animations that make person1 and person2 look as though they are having a converasation. Since this is a sequenceshuffle, the sequence goes through in a random order, thus making the story non linear in nature</li>
+
+	<li>Argue orients person1 and person2 to Deltrese and Deltrese to look at both of them. They cycle through a sqeuence shuffle of animations that make it seem as though they are all arguing</li>
+	</ol>
+<br>
+<li>Children Layer 3:
+<ol>
+	<li>P1Wave/P2Wave just makes either person1 or person2 wave depending on which function is called.</li>
+
+	<li>P1isBored utilizes the texting animation so it looks like he is bored</li>
+	</ol>
+	</ol>
+	</p>
+	</div>
 
     <div class = "contianer table">
       <h1><center>Assignment B2</center></h1>
