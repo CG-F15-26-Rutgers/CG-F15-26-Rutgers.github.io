@@ -1,0 +1,44 @@
+Anthony Castronuovo, Jon Lee, Jake Taubner
+Group 26
+
+
+Link to blog: http://cg-f15-26-rutgers.github.io/
+
+
+For B3 we decided to implement a story where a prince "Pepe" attemps to win over the beloved Princess of the land. In his quest he will enoucnter a wise old man, and ancient text depicting the treasures he seeks. We decided to implement the entirety of B3 into one cohesive game. The title screen takes the player to two implementations of the game. The non-interactive part, and the interactive part. 
+
+Controls (Interactive Part):
+WASD - Move
+Shift - Run
+E - Interact
+1-8 - Switch Cameras
+
+HUD:
+Inventory - Top-Left Corner
+Speech - Right Side of Screen
+
+Interactive Items:
+Treasure Chest - Contains Key
+Gate - Opens only once the key in the inventory
+Purple Heart - Item for the Princess
+Green Gem - Item for the Princess
+Ruins - Ancient Text dictating the location of the Purple Heart
+Fountain - Ancient Text dictating the location of the Green Gem
+
+Interactive Characters:
+Hero - You/The main character
+Princess - She likes shiny things 
+Wise Old Man - He gives good information
+
+Non-Interactive:
+For the non-interactive part we used a behavior tree implementation that shows off branching story. The hero of the story will speak with the princess and then from there he decides whether to go after the Purple Heart or the Green Gem. The selection is random. Then he goes through the process of gathering information from three different sources randomly before going to retrieve the item. 
+
+
+Interactive:
+For the interactive part we went with a first person perspective so the player becomes more immersed in the world. The player can switch between the 8 characters in the scene by pressing the respective number keys. The player must speak to the princess before engaging in information and item gathering. Then, the rest is up to the player. 
+
+
+
+
+
+
