@@ -4,6 +4,10 @@ Group 26
 
 Link to blog: http://cg-f15-26-rutgers.github.io/
 
+Link to GitHub: https://github.com/CG-F15-26-Rutgers/UnityFinal
+
+Link to Project Files: https://drive.google.com/drive/folders/0B9dFIoIIxX2LZUhvQWhFNE1GbWc
+
 
 For B3 we decided to implement a story where a prince "Pepe" attemps to win over the beloved Princess of the land. In his quest he will enoucnter a wise old man, and ancient text depicting the treasures he seeks. We decided to implement the entirety of B3 into one cohesive game. The title screen takes the player to two implementations of the game. The non-interactive part, and the interactive part. 
 
